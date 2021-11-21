@@ -1,0 +1,58 @@
+GET http://localhost:3000/users/
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+###
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
+
+###
+GET http://localhost:3000/states/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
+
+###
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
+
+{
+  "districtName": "Jabalpur",
+  "stateId": 1,
+  "cases": 2423,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+GET http://localhost:3000/districts/22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
+
+###
+DELETE http://localhost:3000/districts/21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
+
+###
+PUT http://localhost:3000/districts/22
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+GET http://localhost:3000/states/2/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjM3NDc4NjU4fQ.XisIpIF9qLrPtWObS1VKulp8yPV033tzGmHtx_txSRU
